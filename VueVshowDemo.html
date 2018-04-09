@@ -1,12 +1,23 @@
 <html>
-    <head>
 
-    </head>
-    <body>
-        
-    </body>
+<head>
+    <script src="https://cdn.bootcss.com/vue/2.4.2/vue.js"></script>
+</head>
+
+<body>
+    <input type="text" v-model="message" placeholder="edit me">
+    <div id="example">
+        <p v-show="greeting">Hello!!</p>
+    </div>
+</body>
+
 </html>
 
 <script>
-    
+    var exampleVM2 = new Vue({
+        el: '#example',
+        data: {
+            greeting: false
+        }
+    })
 </script>
