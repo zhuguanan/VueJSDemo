@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <script src="https://cdn.bootcss.com/vue/2.4.2/vue.js"></script>
+</head>
+
+<body class="native">
+    <div id="example">
+        <p v-if="greeting">
+            Hello Jason
+        </p>
+    </div>
+    <div id="example2">
+        <template v-if="ok">
+            <h1>Title</h1>
+            <p>Paragraph 1</p>
+            <p>Paragraph 2</p>
+        </template>
+    </div>
+</body>
+
+</html>
+<script>
+    var exampleVM1 = new Vue({
+        el: '#example',
+        data: {
+            greeting: false
+        }
+    })
+    var exampleVM2 = new Vue({
+        el: '#example2',
+        data: {
+            ok: true
+        }
+    })
+</script>
