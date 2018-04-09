@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <script src="https://cdn.bootcss.com/vue/2.4.2/vue.js"></script>
+</head>
+
+<body class="native">
+    <div id="example">
+        <p v-if="ok">我是对的</p>
+        <p v-else="ok">我是错的</p>
+    </div>
+    <div id="example2">
+        <custom-component v-show="condition"></custom-component>
+        <p v-show="!condition">这可能也是一个组件</p>
+    </div>
+</body>
+
+</html>
+
+<script>
+    var exampleVM1 = new Vue({
+        el: '#example',
+        data: {
+            ok: false
+        }
+    })
+    var exampleVM2 = new Vue({
+        el: '#example2',
+        data: {
+            condition: false
+        }
+    })
+</script>
