@@ -1,4 +1,4 @@
-1.仅供学习交流，有疑问和错误麻烦指出
+﻿1.仅供学习交流，有疑问和错误麻烦指出
 
 ============================================================================
 时间：2018-4-9 23:28:09
@@ -12,3 +12,13 @@
 日志：
 #1.顾名思义，v-else就是JS中的else的意思，他必须跟着v-if或者v-show，充当else功能
 #2.v-else尽量不要和v-show一起使用，详细代码见Demo5
+
+时间：2018-4-14 17:16:52
+标题：Do not mount Vue to <html> or <body> - mount to normal elements instead.错误
+#1.Vue body标签下面要放一个<div id="example"></div>
+
+标题：v-model.lazy 属性
+#1.官方文档给的例子是<input type="text" v-model="message" lazy>,按照这个写法没有效果；
+网上查了一下资料改成了一下写法可以<input type="text" v-model.lazy="message">。
+#2.v-model在input事件中同步输入框的值和数据，我们可以添加一个lazy特性，从而将数据改到在change事件中发生。
+详情见：Demo6_VueVmodel
