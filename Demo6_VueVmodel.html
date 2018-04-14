@@ -14,7 +14,7 @@
             <label for="man">男</label>
             <input type="radio" id="male" value="2" v-model="data.sex">
             <label for="male">女</label>
-            <br/> 兴趣：
+            <br> 兴趣：
             <input type="checkbox" id="book" value="book" v-model="data.interest">
             <label for="book">阅读</label>
             <input type="checkbox" id="swim" value="swim" v-model="data.interest">
@@ -23,18 +23,25 @@
             <label for="game">游戏</label>
             <input type="checkbox" id="song" value="song" v-model="data.interest">
             <label for="song">唱歌</label>
-            <br/> 身份：
+            <br> 身份：
             <select name="identity" v-model="data.identity">
                 <option value="teacher" selected>教师</option>
                 <option value="doctor">医生</option>
                 <option value="lawyer">律师</option>
             </select>
+            <br>
+            同步输入框的值和数据
+            <input type="text" v-model="message">
+            <p>输入框的内容是：{{message}}</p>
+            <br>
+            不同步输入框的值和数据（使用lazy属性）
+            <input type="text" v-model.lazy="msg">
+            <p>输入框的内容是：{{msg}}</p>
         </form>
     </div>
 </body>
 
 </html>
-
 <script>
     new Vue({
         el: '#example',
@@ -44,7 +51,9 @@
                 sex: "1",
                 interest: ['game'],
                 identity: 'lawyer'
-            }
+            },
+            message:'',
+            msg:''
         }
     })
 </script>
