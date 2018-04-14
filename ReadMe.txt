@@ -22,3 +22,6 @@
 网上查了一下资料改成了一下写法可以<input type="text" v-model.lazy="message">。
 #2.v-model在input事件中同步输入框的值和数据，我们可以添加一个lazy特性，从而将数据改到在change事件中发生。
 详情见：Demo6_VueVmodel
+#3.Vue2.0 移除了属性debounce,该属性在每次敲击之后延时同步输入框的值和数据。如果每次更新都要进行高耗操作
+（例如：在input中输入内容时随时发送AJAX请求），那么它较为有用。由于2.0移除了该数据，暂时不写具体实例。自行
+参考Vue1.0
